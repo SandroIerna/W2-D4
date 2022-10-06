@@ -64,15 +64,21 @@ console.log(obj2);
  Currently you have a promotion: if the customer's shopping cart total is more than 50, the user is eligible for free shipping (otherwise it costs 10).
  Write an algorithm that calculates the total cost to charge the user with.
 */
+
 console.log("\n---------------ex6---------------");
-const orders = [5, 15, 45];
-const totalShoppingCart = orders.reduce((accumulator, value) => {
-  return accumulator + value;
-}, 0);
-if (totalShoppingCart > 50) {
-  console.log("Total price:", totalShoppingCart);
+const orders = [5, 15, 45, 89];
+console.log(orders[1]);
+let sum = 0;
+for (let i = 0; i <= orders.length - 1; i++) {
+  sum += orders[i];
+}
+// const totalShoppingCart = orders.reduce((accumulator, value) => {
+//   return accumulator + value;
+// }, 0);
+if (sum > 50) {
+  console.log("Total price:", sum);
 } else {
-  console.log("Total price:", totalShoppingCart + 10);
+  console.log("Total price:", sum + 10);
 }
 
 /* EXERCISE 7
@@ -81,8 +87,14 @@ if (totalShoppingCart > 50) {
 */
 
 console.log("\n---------------ex7---------------");
-const discount = (totalShoppingCart / 100) * 20;
+
+const discount = (sum / 100) * 20;
 console.log("Total price:", discount);
+if (discount > 50) {
+  console.log("Total price:", discount);
+} else {
+  console.log("Total price:", discount + 10);
+}
 
 /* EXERCISE 8
  Create a variable and assign to it an object representing a car, with properties like brand, model and licensePlate.
