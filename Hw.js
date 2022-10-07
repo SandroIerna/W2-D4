@@ -141,7 +141,7 @@ console.log(carsForRent);
  Print to the console the type of the car variable you created before, as well as the types of its licensePlate and brand properties.
 */
 console.log("\n---------------ex11---------------");
-// console.log("\n-------removed cars-------" + removedCars);
+console.log(carsForRent);
 
 /* EXERCISE 12
  Create a new variable called carsForSale assigning to it an empty array, and then insert 3 cars into it.
